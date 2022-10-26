@@ -1,0 +1,12 @@
+<section class="container w-3/5 mx-auto mt-10">
+<h1 class="text-slate-800 text-xl font-semibold">Edit todo</h1>
+
+<%= render "form", todo: @todo %>
+
+<br>
+
+<div class="space-x-2">
+  <div class="btn py-2 px-4"><%= link_to "Show this todo", @todo %></div>
+  <div class="btn py-2 px-4"><%= link_to "Back to todos", todos_path %></div>
+</div>
+</section>

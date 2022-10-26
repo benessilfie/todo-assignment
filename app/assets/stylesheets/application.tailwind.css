@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply mt-3 bg-blue-50 text-slate-600 rounded-sm px-5 inline-block font-medium cursor-pointer hover:bg-blue-100;
+  }
+}
+
+
+@layer base {
+  /* custom Fonts */
+  @font-face {
+    font-family: "Helvetica Now Display";
+    src: url("../fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+      url("../fonts/HelveticaNowDisplay-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Helvetica Now Display";
+    src: url("../fonts/HelveticaNowDisplay-Medium.woff2") format("woff2"),
+      url("../fonts/HelveticaNowDisplay-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Helvetica Now Display";
+    src: url("../fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"),
+      url("../assets/fonts/HelveticaNowDisplay-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Helvetica Now Display";
+    src: url("../fonts/HelveticaNowDisplay-ExtraBold.woff2") format("woff2"),
+      url("../fonts/HelveticaNowDisplay-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+  }
+}
