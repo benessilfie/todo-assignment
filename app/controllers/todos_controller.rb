@@ -1,9 +1,10 @@
 class TodosController < ApplicationController
+  before_action :requires_sign_in
   before_action :set_todo, only: %i[ show edit update destroy ]
 
   # GET /todos or /todos.json
   def index
-    @todos = Todo.all
+    @todos = @user.todos.all
   end
 
   # GET /todos/1 or /todos/1.json
@@ -22,7 +23,7 @@ class TodosController < ApplicationController
 
   # POST /todos or /todos.json
   def create
-    @todo = Todo.new(todo_params)
+    @todo = @user.todos.create(todo_params)
 
     respond_to do |format|
       if @todo.save
