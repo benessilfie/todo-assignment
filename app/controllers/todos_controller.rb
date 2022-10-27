@@ -26,7 +26,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
-        format.html { redirect_to todos_path, notice: "Todo was successfully created" }
+        format.html { redirect_to todos_path , notice: "Todo was successfully created" }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
