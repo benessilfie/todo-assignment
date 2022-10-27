@@ -1,0 +1,59 @@
+<section class="" >
+   
+   <div class=" w-96 block ml-[32rem] mt-20">
+       <div class="p-4 w-[31.5rem]  bg-white rounded-lg border border-gray-200 shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+
+           <%= form_with(url: create_user_path, class: "space-y-6 w-96") do |form| %>
+
+               <h5 class="text-xl font-medium text-gray-900 dark:text-white">Create a Free Account</h5>
+
+               <div class="flex space-x-6 ">
+                   <div>
+                       <%= form.label :first_name, "First Name", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+                       <%= form.text_field :first_name, placeholder: "Enter Your First Name", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                   </div>
+                   <div>
+                       <%= form.label :last_name, "Last Name", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+                       <%= form.text_field :last_name, placeholder: "Enter Your Last Name", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                   </div>
+               </div>
+
+               <div>
+                   <%= form.label :email, "Email", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+
+                   <%= form.email_field :email, placeholder: "name@company.com", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[27.6rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+               </div>
+
+               <div class="flex space-x-6">
+                   <div>
+                       <%= form.label :password, "Enter password", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+                       
+                       <%= form.password_field :password, placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                   </div>
+
+                   <div>
+                       <%= form.label :password, "Confirm Your password", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+
+                       <%= form.password_field :password, placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                   </div>
+               </div>
+
+
+
+                <%= form.submit "Create your account", class: "w-[28rem] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+               
+               
+
+               <div class="flex justify-center ">
+                   <div class="flex ">
+                   <span class="ml-20 flex text-sm text-blue-700 hover:underline dark:text-blue-500">
+                   <%= link_to "Go Back to Homepage",  root_path %>
+                   </span>
+                   </div>
+               </div>
+
+           <% end %>
+
+       </div>
+   </div>
+</section>
