@@ -47,19 +47,21 @@
           </th>
 
           <td class="py-4 px-6">
-            <%= todo.description%>
+            <%= todo.description %>
           </td>
 
+          <%# Conditionally render status %>
           <td class="py-4 px-6">
-           <% if todo.status = 0 %>
+           <% if todo.status == "Pending" %>
             <span class="bg-red-100 text-red-600 py-1 px-4 rounded-full text-xs dark:bg-red-200 dark:text-red-800 text-center"><%= todo.status %></span>
-            <% elsif todo.status = 1 %>
+            <% elsif todo.status == "Completed" %>
             <span class="bg-green-100 text-green-600 py-1 px-4 rounded-full text-xs dark:bg-green-200 dark:text-green-800 text-center"><%= todo.status %></span>
             <% else %>
             <span class="bg-yellow-100 text-yellow-600 py-1 px-4 rounded-full text-xs dark:bg-yellow-200 dark:text-yellow-800 text-center"><%= todo.status %></span>
             <% end %>
           </td>
 
+          <%# Icons %>
           <td class="py-4 px-6 flex space-x-4">
             <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
             <%= link_to edit_todo_path(todo)  do %>
