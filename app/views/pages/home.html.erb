@@ -1,3 +1,21 @@
-<section class="container mx-auto">
-  <h1 class="pt-8 text-2xl font-bold" >Welcome to my TODO APP</h1>
+<section class=" flex flex-col">
+
+<h1 class="pt-8 text-3xl text-slate-300 text-center" >WELCOME TO MY TODO APP</h1>
+
+<div class="flex self-center mr-20 mt-8">
+  <div class="inline-flex items-center justify-center ml-20 rounded-md " role="group">
+
+    <%= link_to "Create an Account", todos_path, class: "py-2 shadow-sm px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" %>
+
+    <%= link_to "", !todos_path, class: "py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200" %>
+
+    <%= link_to "View Your Todos", todos_path, class: "py-2 shadow-sm px-4 text-sm font-medium text-gray-900 bg-white rounded-r-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" %>
+      
+    
+  </div>
+</div>
+
+<div class="self-center mt-16 mr-16 opacity-50  w-80"><%= image_tag ("state.svg") %></div>
+
+
 </section>
