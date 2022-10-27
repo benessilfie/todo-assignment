@@ -1,10 +1,13 @@
 class TodosController < ApplicationController
-  before_action :requires_sign_in
+  before_action :requires_sign_in, except: [:home]
   before_action :set_todo, only: %i[ show edit update destroy ]
 
   # GET /todos or /todos.json
   def index
     @todos = @user.todos.all
+  end
+
+  def home
   end
 
   # GET /todos/1 or /todos/1.json

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "pages#home"
+  root "todos#home"
   resources :todos
 
   scope :auth do
