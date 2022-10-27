@@ -30,8 +30,8 @@ class AuthController < ApplicationController
         user_params = params[:user].permit!
 
         respond_to do |format|
-            if User.find_by(email: user_params[:email]).present?
-                format.html {redirect_to sign_up_path, notice: "user with email already exists"}
+            if User.create(user_params)
+                format.html { redirect_to sign_in_path, notice: "User successfully created" }
             else
                 user = User.create(user_params)
                 if user.errors&.full_messages.present? 
