@@ -1,10 +1,10 @@
-# Altschool Assignment: Todo App [Live Demo](https://ess-todo-app.herokuapp.com/)
+# Altschool Assignment: Todo App [Live Demo](https://todo-app-alt.herokuapp.com/)
 
 ![Alt text](/public/screen1.png?raw=true)
 ![Alt text](/public/screen2.png?raw=true)
 
 ## Live Demo
-[View Project](https://ess-todo-app.herokuapp.com/)
+[View Project](https://todo-app-alt.herokuapp.com/)
 
 ## System dependencies
 ___
