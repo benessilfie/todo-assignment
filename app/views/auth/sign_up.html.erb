@@ -3,7 +3,7 @@
    <div class=" w-96 block ml-[23rem] mt-12">
        <div class="p-4 w-[31.5rem]  bg-white rounded-lg border border-gray-200 shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 
-           <%= form_with(url: create_user_path, class: "space-y-6 w-96") do |form| %>
+           <%= form_with(scope: :user, class: "space-y-6 w-96") do |form| %>
 
                <h5 class="text-xl font-medium text-gray-900 dark:text-white">Create a Free Account</h5>
 
@@ -28,13 +28,13 @@
                    <div>
                        <%= form.label :password, "Enter password", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
                        
-                       <%= form.password_field :password, placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                       <%= form.password_field :password, placeholder: "•••••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
                    </div>
 
                    <div>
-                       <%= form.label :password, "Confirm Your password", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+                       <%= form.label :password_confirmation, "Confirm Your password", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
 
-                       <%= form.password_field :password, placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+                       <%= form.password_field :password_confirmation, placeholder: "•••••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[13rem] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
                    </div>
                </div>
 
