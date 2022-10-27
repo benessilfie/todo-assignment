@@ -1,19 +1,71 @@
 <section class="container w-3/5 mx-auto mt-16">
 
 <% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+  <p class="py-2 px-3 bg-green-50 mb-2 text-green-500 font-medium rounded-lg inline-block" id="notice">
     <%= notice %>
   </p>
 <% end %>
 
-  <h1 class="text-slate-800 text-xl font-semibold mt-10"><%= @todo.description %></h1>
+
+  <h1 class="text-slate-800 text-xl text-center font-semibold mt-10 mb-6"><%= @todo.description %></h1>
   <br>
+
+
+
+<div class="overflow-x-auto relative mb-10">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+
+          <th scope="col" class="py-3 px-6">
+            Status
+          </th>
+
+          <th scope="col" class="py-3 px-6">
+            Created at
+          </th>
+
+          <th scope="col" class="py-3 px-6">
+            Updated at
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+
+          <td class="py-4 px-6">
+           <% if @todo.status = 0 then %>
+            <span class="bg-red-100 text-red-600 py-1 px-4 rounded-full text-xs dark:bg-red-200 dark:text-red-800 text-center"><%= @todo.status %></span>
+            <% elsif @todo.status = 1 then %>
+            <span class="bg-green-100 text-green-600 py-1 px-4 rounded-full text-xs dark:bg-green-200 dark:text-green-800 text-center"><%= @todo.status %></span>
+            <% else %>
+            <span class="bg-yellow-100 text-yellow-600 py-1 px-4 rounded-full text-xs dark:bg-yellow-200 dark:text-yellow-800 text-center"><%= @todo.status %></span>
+            <% end %>
+          </td>
+
+          <td class="py-4 px-6 space-x-4">
+            <%= time_ago_in_words(@todo.created_at) %> ago
+          </td>
+
+          <td class="py-4 px-6 space-x-4">
+            <%= time_ago_in_words(@todo.updated_at) %> ago
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
 
 <div>
   <div class="btn py-2 px-4"><%= link_to "Edit this todo", edit_todo_path(@todo) %></div>
   <div class="btn py-2 px-4"><%= link_to "Back to todos", todos_path %></div>
-  <div class="btn py-2 px-4"><%= button_to "Delete this todo", @todo, method: :delete %></div>
 </div>
+
+
 
 </section>
 
