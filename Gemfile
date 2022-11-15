@@ -54,6 +54,15 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # gem "debug", platforms: %i[ mri windows ]
+
+  # Add Rspec for testing
+  gem "rspec-rails"
+
+  # Add FactoryBot for fixtures
+  gem "factory_bot_rails"
+
+  # Database cleaner for cleaning up test data
+  gem "database_cleaner"
 end
 
 group :development do
@@ -67,6 +76,14 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+end
+
+group :test do
+  # Use Capybara for integration testing [
+  gem "capybara"
+  gem "selenium-webdriver"
+
+  gem "webdrivers"
 end
 
 
