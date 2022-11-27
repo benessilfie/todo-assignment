@@ -11,6 +11,7 @@ ___
 - postgresql
 - tailwindcss
 - ruby
+- rails
 
 Database creation
 ___
