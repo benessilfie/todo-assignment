@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.hosts << "todo-app-production-5458.up.railway.app"
+  config.hosts << "todo-app-production-1a28.up.railway.app"
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
