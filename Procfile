@@ -1,1 +1,1 @@
-web: bin/rails server -b 0.0.0.0 -p ${PORT:-3001} && yarn build:css --watch
+web: rake db:reset && bin/rails server -b 0.0.0.0 -p ${PORT:-3001} && yarn build:css --watch
