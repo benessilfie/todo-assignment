@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    get 'test', to: 'test#index', as: :test
+    get '/', to: 'test#index', as: :test
     post 'users', to: 'auth#register', as: :register
     post 'sign_in', to: 'auth#login', as: :login
 
