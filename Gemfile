@@ -21,6 +21,9 @@ gem "jsbundling-rails"
 # Add Faker for generating fake data
 gem "faker"
 
+# Add byebug for debugging
+gem "byebug"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -41,6 +44,11 @@ gem "jbuilder"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
+
+# Use jwt for authentication
+gem "jwt"
+
+gem 'rack-cors'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem "tzinfo-data", platforms: %i[ windows jruby ]

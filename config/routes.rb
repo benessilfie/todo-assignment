@@ -11,4 +11,12 @@ Rails.application.routes.draw do
     post "logout", to: "auth#logout", as: :logout
   end
 
+  namespace :api do
+    get 'test', to: 'test#index', as: :test
+    post 'users', to: 'auth#register', as: :register
+    post 'sign_in', to: 'auth#login', as: :login
+
+    resources :todos, only: [:index, :show, :create, :update, :destroy]
+  end
+
 end
